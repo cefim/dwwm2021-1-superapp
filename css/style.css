@@ -42,9 +42,128 @@
 			url("../fonts/open-sans-v18-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
-body {
-	font-family: "Open Sans", sans-serif;
+/* Styles généraux */
+:root {
+	--primary: #DD5555;
+	--font-color: #2E2E2E;
 }
 
+/* Formats de couleurs : rgb, hexadecimal, hsl, couleurs nommées
+couleurs nommées : red, white, purple, light blue, salmon, ...
+
+rgb(red, green, blue) -> 0 à 255 / rgb(0,0,0) : noir / rgb(255,255,255) : blanc
+rgba(50,24,102,0.5) -> 50% d'opacité
+
+hexadécimal: #000000 : noir -># 00(rouge) 00(vert) 00(bleu)
+0 1 2 3 4 5 6 7 8 9 a b c d e f
+blanc #ffffff -> #fff
+#aa5533 -> #a53
+#ccceee -> cc ce ee
+
+#ffffff77 - > opacité environ 50%
+
+hsl : hue saturation light : teinte luminosité saturation
+hue : 0 à 360
+saturation: 0 à 100%
+luminosité: 0 à 100%
+hsl(120, 100%, 25%) : vert
+hsl(360, 100%, 25%) : rouge
+
+hsla(360,100%,25%,.5) -> rouge avec opacité à 50%
+*/
+
+
 /* Familles génériques de police : serif, sans-serif, monospace, cursive, fantasy */
+body {
+	font-family: "Open Sans", sans-serif;
+	color: var(--font-color);
+	font-size: 1.6rem;
+	line-height: 1.5;
+	background-color: #fff;
+}
+
+/* Layout */
+
+/* Unités : px, rem, em, %, vw, vh, vmin vmax, cm, mm, ch */
+.container {
+	width: 100%;
+	max-width: 117rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+/* Header */
+
+.main-header {
+	color: #fff;
+	background-color: var(--primary);
+}
+
+.main-header .container {
+	display: flex;
+}
+
+/* Navigation */
+.menu {
+	display: flex;
+}
+
+/* Hero */
+.hero {
+	color: #fff;
+	background-image: url(../img/about.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.hero .container {
+	max-width: 40rem;
+}
+
+.cta-list {
+	display: flex;
+}
+
+/* Services */
+.services .container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.services-title {
+	grid-column: 1 / -1;
+}
+
+/* Team */
+.team-header {
+	color: #fff;
+	background-image: url(../img/team.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.members-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+/* Footer */
+.contact {
+	color: #fff;
+	background-color: var(--primary);
+}
+
+.contact .container {
+	max-width: 78rem;
+}
+
+.contact-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.fullwidth {
+	grid-column: 1 / -1;
+}

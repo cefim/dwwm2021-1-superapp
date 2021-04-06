@@ -5,98 +5,126 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Super App</title>
+	<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"> -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 	<header class="main-header">
-		<div class="logo">Super App</div>
-		<!-- nav.main-nav>ul.menu>li.menu-item*4>a.menu-link -->
-		<!-- < = &lt;  //  > = &gt;  //  & = &amp;  // espace insécable = &nbsp; -->
-		<nav class="main-nav">
-			<ul class="menu" role="list">
-				<li class="menu-item"><a href="#" class="menu-link">&Agrave; propos</a></li>
-				<li class="menu-item"><a href="#" class="menu-link">Services</a></li>
-				<li class="menu-item"><a href="#" class="menu-link">L'équipe</a></li>
-				<li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
-			</ul>
-		</nav>
+		<div class="container">
+			<div class="logo">Super App</div>
+			<!-- nav.main-nav>ul.menu>li.menu-item*4>a.menu-link -->
+			<!-- < = &lt;  //  > = &gt;  //  & = &amp;  // espace insécable = &nbsp; -->
+			<nav class="main-nav">
+				<ul class="menu" role="list">
+					<li class="menu-item"><a href="#" class="menu-link">&Agrave; propos</a></li>
+					<li class="menu-item"><a href="#" class="menu-link">Services</a></li>
+					<li class="menu-item"><a href="#" class="menu-link">L'équipe</a></li>
+					<li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 	<section class="hero">
-		<h1>Super App</h1>
-		<p class="baseline">L'application trop super&nbsp;!</p>
-		<ul class="cta-list">
-			<li class="cta-item"><a href="#" class="cta-link">Like it</a></li>
-			<li class="cta-item"><a href="#" class="cta-link">Love it</a></li>
-			<li class="cta-item"><a href="#" class="cta-link">Buy it</a></li>
-		</ul>
+		<div class="container">
+			<h1>Super App</h1>
+			<p class="baseline">L'application trop super&nbsp;!</p>
+			<ul class="cta-list">
+				<li class="cta-item"><a href="#" class="cta-link"><img src="img/thumbs-up.svg" alt="" aria-hidden="true"> Like it</a></li>
+				<li class="cta-item"><a href="#" class="cta-link"><img src="img/heart-shape-silhouette.svg" alt="" aria-hidden="true"> Love it</a></li>
+				<li class="cta-item"><a href="#" class="cta-link"><img src="img/shopping-cart-black-shape.svg" alt="" aria-hidden="true"> Buy it</a></li>
+			</ul>
+		</div>
 	</section>
 	<section class="services">
-		<h2>Elle fait des trucs supers&nbsp;!</h2>
-		<article class="service-card">
-			<!-- image -->
-			<h3>Mettre la table</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
-		</article>
-		<article class="service-card">
-			<!-- image -->
-			<h3>Faire le lit</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
-		</article>
-		<article class="service-card">
-			<!-- image -->
-			<h3>Allumer le feu</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
-		</article>
-		<article class="service-card">
-			<!-- image -->
-			<h3>Ramasser les feuilles</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
-		</article>
-		<article class="service-card">
-			<!-- image -->
-			<h3>Protéger de la pluie</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
-		</article>
-		<article class="service-card">
-			<!-- image -->
-			<h3>Vider votre compte</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
-		</article>
+		<div class="container">
+			<h2 class="services-title">Elle fait des trucs supers&nbsp;!</h2>
+			<article class="service-card">
+				<figure class="service-img"><img src="img/fork-and-knife-silhouette.svg" alt="Une fourchette et un couteau"></figure>
+				<h3>Mettre la table</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
+			</article>
+			<article class="service-card">
+				<figure class="service-img"><img src="img/bed.svg" alt="Une personne allongée dans un lit"></figure>
+				<h3>Faire le lit</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
+			</article>
+			<article class="service-card">
+				<figure class="service-img"><img src="img/fire-symbol.svg" alt="Un feu de camp"></figure>
+				<h3>Allumer le feu</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
+			</article>
+			<article class="service-card">
+				<figure class="service-img"><img src="img/plant-leaf-with-white-details.svg" alt="Une feuille d'arbre"></figure>
+				<h3>Ramasser les feuilles</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
+			</article>
+			<article class="service-card">
+				<figure class="service-img"><img src="img/umbrella-black-silhouette.svg" alt="Un parapluie"></figure>
+				<h3>Protéger de la pluie</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
+			</article>
+			<article class="service-card">
+				<figure class="service-img"><img src="img/dollar-symbol.svg" alt="Le symbole dollar"></figure>
+				<h3>Vider votre compte</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolores eum autem quod quasi beatae hic deserunt ut quis eos.</p>
+			</article>
+		</div>
 	</section>
 	<section class="team">
-		<h2>La super équipe à l'origine de SuperApp</h2>
-		<ul class="members-list">
-			<li class="member-item">
-				<h3>Tex Talign</h3>
-				<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
-			</li>
-			<li class="member-item">
-				<h3>Marge Inn</h3>
-				<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
-			</li>
-			<li class="member-item">
-				<h3>Isaac Newton</h3>
-				<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
-			</li>
-			<li class="member-item">
-				<h3>Ash Tehemel</h3>
-				<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
-			</li>
-		</ul>
+		<header class="team-header">
+			<div class="container">
+				<h2>La super équipe à l'origine de SuperApp</h2>
+			</div>
+		</header>
+		<div class="container">
+			<ul class="members-list">
+				<li class="member-item">
+					<figure class="member-img"><img src="img/avaone.jpg" srcset="img/avaone@2x.jpg 2x" alt="Portrait de Tex Talign avec des lunettes de soleil"></figure>
+					<h3>Tex Talign</h3>
+					<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
+				</li>
+				<li class="member-item">
+					<figure class="member-img"><img src="img/avatwo.jpg" srcset="img/avatwo@2x.jpg 2x" alt="Portrait de Marge Inn qui vient de se laver les cheveux"></figure>
+					<h3>Marge Inn</h3>
+					<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
+				</li>
+				<li class="member-item">
+					<figure class="member-img"><img src="img/avathree.jpg" srcset="img/avathree@2x.jpg 2x" alt="Portrait d'Isaac Newton qui découvre la gravité"></figure>
+					<h3>Isaac Newton</h3>
+					<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
+				</li>
+				<li class="member-item">
+					<figure class="member-img"><img src="img/avafour.jpg" srcset="img/avafour@2x.jpg 2x" alt="Portrait d'Ash Tehemel qui fait une figure rigolote"></figure>
+					<h3>Ash Tehemel</h3>
+					<a href="mailto:tex.talign@superapp.com">Lui écrire</a>
+				</li>
+			</ul>
+		</div>
 	</section>
 	<footer class="contact">
-		<h2>Envoyez-nous un message</h2>
-		<form action="" class="contact-form">
-			<label for="name">Votre nom</label>
-			<input type="text" id="name" placeholder="Ex: Ash Tehemel" name="name" required>
-			<label for="email">Votre e-mail</label>
-			<input type="email" id="email" name="email" placeholder="Ex : ash.tehemel@superapp.com" required>
-			<label for="msg">Votre message</label>
-			<textarea name="msg" id="msg" required></textarea>
-			<button type="submit">Envoyer</button>
-		</form>
+		<div class="container">
+			<h2>Envoyez-nous un message</h2>
+			<form action="" class="contact-form">
+				<div class="formgroup">
+					<label for="name">Votre nom</label>
+					<input type="text" id="name" placeholder="Ex: Ash Tehemel" name="name" required>
+				</div>
+				<div class="formgroup">
+					<label for="email">Votre e-mail</label>
+					<input type="email" id="email" name="email" placeholder="Ex : ash.tehemel@superapp.com" required>
+				</div>
+				<div class="formgroup fullwidth">
+					<label for="msg">Votre message</label>
+					<textarea name="msg" id="msg" required></textarea>
+				</div>
+				<div class="formgroup fullwidth">
+					<button type="submit">Envoyer</button>
+				</div>
+			</form>
+		</div>
 	</footer>
 
 </body>
