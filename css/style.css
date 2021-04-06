@@ -105,6 +105,20 @@ body {
 	display: flex;
 }
 
+.logo {
+	width: 12rem;
+	height: 2.8rem;
+	background-image: url(../img/logo.png);
+	background-size: contain;
+	background-position: center;
+}
+
+@media (min-resolution: 144dpi) {
+	.logo {
+		background-image: url(../img/logo@2x.png);
+	}
+}
+
 /* Navigation */
 .menu {
 	display: flex;
@@ -116,6 +130,12 @@ body {
 	background-image: url(../img/about.jpg);
 	background-size: cover;
 	background-position: center;
+}
+
+@media (min-resolution: 144dpi) {
+	.hero {
+		background-image: url(../img/about@2x.jpg);
+	}
 }
 
 .hero .container {
@@ -142,6 +162,12 @@ body {
 	background-image: url(../img/team.jpg);
 	background-size: cover;
 	background-position: center;
+}
+
+@media (min-resolution: 144dpi) {
+	.team-header {
+		background-image: url(../img/team@2x.jpg);
+	}
 }
 
 .members-list {
