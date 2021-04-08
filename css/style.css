@@ -48,6 +48,10 @@
 	--font-color: #2E2E2E;
 }
 
+:focus {
+	outline: .4rem dotted green;
+}
+
 /* Formats de couleurs : rgb, hexadecimal, hsl, couleurs nommées
 couleurs nommées : red, white, purple, light blue, salmon, ...
 
@@ -79,7 +83,75 @@ body {
 	color: var(--font-color);
 	font-size: 1.6rem;
 	line-height: 1.5;
+	text-align: center;
 	background-color: #fff;
+}
+
+p {
+	margin-bottom: 0.25em;
+}
+
+h1,
+h2,
+h3 {
+	margin-bottom: .25em;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 4.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 3.6rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 2.8rem;
+	font-weight: 600;
+}
+
+a {
+	color: var(--primary);
+}
+
+/* Components */
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	padding: 1.2rem 1.4rem;
+	border-radius: .5rem;
+	min-width: 11.2rem;
+	color: var(--font-color);
+	font-size: 1.8rem;
+	line-height: 1.2;
+	text-decoration: none;
+	background-color: #fff;
+}
+
+.btn::before {
+	content: '';
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: var(--primary);
+	border-radius: 0.5rem;
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: .3s;
+}
+
+.btn:hover::before {
+	transform: scaleX(1);
 }
 
 /* Layout */
@@ -103,14 +175,17 @@ body {
 
 .main-header .container {
 	display: flex;
+	align-items: center;
 }
 
 .logo {
 	width: 12rem;
 	height: 2.8rem;
+	margin-right: 2.8rem;
 	background-image: url(../img/logo.png);
 	background-size: contain;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 @media (min-resolution: 144dpi) {
@@ -120,12 +195,34 @@ body {
 }
 
 /* Navigation */
+
+/* Les display : flex, grid, inline, block, inline-block, inline-flex, none, table, table-cell, list-item, ... */
 .menu {
 	display: flex;
 }
 
+.menu-link {
+	display: block;
+	padding: 1.5rem;
+	font-size: 1.4rem;
+	line-height: 1.2;
+	text-decoration: none;
+	color: currentColor;
+	transition: .3s;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+	background-color: rgba(0,0,0,0.25);
+}
+
 /* Hero */
 .hero {
+	display: flex;
+	align-items: center;
+	min-height: 80vh;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	color: #fff;
 	background-image: url(../img/about.jpg);
 	background-size: cover;
@@ -142,8 +239,18 @@ body {
 	max-width: 40rem;
 }
 
+.baseline {
+	font-size: 2.4rem;
+	line-height: 1.2;
+}
+
 .cta-list {
 	display: flex;
+	justify-content: space-between;
+}
+
+.cta-link img {
+	margin-right: 1.2rem;
 }
 
 /* Services */
