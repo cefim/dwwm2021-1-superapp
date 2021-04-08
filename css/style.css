@@ -49,7 +49,7 @@
 }
 
 :focus {
-	outline: .4rem dotted green;
+	outline: .2rem solid #55d555;
 }
 
 /* Formats de couleurs : rgb, hexadecimal, hsl, couleurs nommées
@@ -164,7 +164,8 @@ textarea {
 }
 
 
-.btn img {
+.btn img,
+.btn svg {
 	margin-right: 1.2rem;
 }
 
@@ -202,6 +203,15 @@ textarea {
 	color: var(--primary);
 }
 
+.btn-secondary:hover path,
+.btn-secondary:focus path {
+	fill: var(--primary);
+}
+
+.btn-secondary:hover img,
+.btn-secondary:focus img {
+	filter: invert(47%) sepia(43%) saturate(849%) hue-rotate(314deg) brightness(89%) contrast(93%);
+}
 /* Layout */
 
 /* Unités : px, rem, em, %, vw, vh, vmin vmax, cm, mm, ch */
