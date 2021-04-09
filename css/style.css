@@ -273,6 +273,7 @@ x-small : container = 100%
 /* Header */
 
 .main-header {
+	position: relative;
 	color: #fff;
 	background-color: var(--primary);
 }
@@ -280,6 +281,13 @@ x-small : container = 100%
 .main-header .container {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 36em) {
+	.main-header .container {
+		justify-content: flex-start;
+	}
 }
 
 .logo {
@@ -305,6 +313,24 @@ x-small : container = 100%
 	display: none;
 }
 
+.toggle-menu {
+	background-color: transparent;
+	padding: 1.5rem;
+	border: 0;
+	color: #fff;
+}
+  
+.menu {
+	position: absolute;
+	z-index: 10;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: var(--primary);
+}
+
+
+
 @media screen and (min-width: 36em) {
 	.toggle-menu {
 		display: none;
@@ -312,6 +338,7 @@ x-small : container = 100%
 
 	.menu {
 		display: flex;
+		position: static;
 	}
 }
 
