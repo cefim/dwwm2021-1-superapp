@@ -103,9 +103,16 @@ h3,
 
 h1,
 .h1-like {
-	font-size: 4.8rem;
+	font-size: 3.6rem;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+
+@media screen and (min-width: 36em) {
+	h1,
+	.h1-like {
+		font-size: 4.8rem;
+	}
 }
 
 h2,
@@ -217,11 +224,50 @@ textarea {
 /* Unités : px, rem, em, %, vw, vh, vmin vmax, cm, mm, ch */
 .container {
 	width: 100%;
-	max-width: 117rem;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+}
+
+/* Points de rupture de BootStrap : 0 <= X-small < 576 <= small < 768 <= medium < 992 <= large < 1200 <= X-large < 1400 <= XX-large 
+
+Dans notre cas, XX-large ne sera pas utilisé 
+Largeur du container dans les différents cas
+^
+X-large : container = 1170px 
+^
+large : container = 962px
+^
+medium : container = 738px
+^
+small : container = 546px
+^
+x-small : container = 100%
+*/
+
+@media screen and (min-width: 36em) { /* 36em = 36 * 16 (base navigateur) = 576px */
+	.container {
+		max-width: 54.6rem;
+	}
+}
+
+@media screen and (min-width: 48em) { /* 768px */
+	.container {
+		max-width: 73.8rem;
+	}
+}
+
+@media screen and (min-width: 62em) { /* 992px */
+	.container {
+		max-width: 96.2rem;
+	}
+}
+
+@media screen and (min-width: 75em) { /* 1200px */
+	.container {
+		max-width: 117rem;
+	}
 }
 
 /* Header */
@@ -255,9 +301,20 @@ textarea {
 /* Navigation */
 
 /* Les display : flex, grid, inline, block, inline-block, inline-flex, none, table, table-cell, list-item, ... */
-.menu {
-	display: flex;
+[hidden] {
+	display: none;
 }
+
+@media screen and (min-width: 36em) {
+	.toggle-menu {
+		display: none;
+	}
+
+	.menu {
+		display: flex;
+	}
+}
+
 
 .menu-link {
 	display: block;
@@ -298,16 +355,33 @@ textarea {
 }
 
 .baseline {
-	font-size: 2.4rem;
+	font-size: 2rem;
 	line-height: 1.2;
 }
 
 ul.cta-list {
-	display: flex;
-	justify-content: space-between;
 	margin-top: 2.4rem;
 	padding-top: 2.4rem;
 	border-top: 1px solid #fff;
+}
+
+.cta-item:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 36em) {
+	.baseline {
+		font-size: 2.4rem;
+	}
+
+	ul.cta-list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.cta-item:not(:last-child) {
+		margin-bottom: 0;
+	}
 }
 
 /* Services */
@@ -318,8 +392,29 @@ ul.cta-list {
 
 .services .container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr)); /*27rem nous permet d'avoir un maximum de 3 colonnes en largeur maximale et de bien gérer dans les tailles intermédiaires */
 	gap: 3.2rem;
+}
+
+/* @media screen and (min-width: 36em) {
+	.services .container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.services .container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+} */
+
+.service-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.service-card h3 + * {
+	margin-top: auto;
 }
 
 .services-title {
@@ -359,10 +454,22 @@ ul.cta-list {
 
 ul.members-list {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: 1fr;
 	gap: 5.4rem;
 	margin-top: 6.4rem;
 	margin-bottom: 6.4rem;
+}
+
+@media screen and (min-width: 36em) {
+	ul.members-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 62em) {
+	ul.members-list {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 .member-img img {
@@ -370,10 +477,31 @@ ul.members-list {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 2.4rem;
-	width: 24rem;
-	height: 24rem;
+	width: 18rem;
+	height: 18rem;
 	object-fit: cover;
 	object-position: center;
+}
+
+@media screen and (min-width: 48em) and (max-width: 61.999em) {
+	.member-img img {
+		width: 24rem;
+		height: 24rem;
+	}
+}
+
+@media screen and (min-width: 62em) and (max-width: 74.999em) {
+	.member-img img {
+		width: 18rem;
+		height: 18rem;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.member-img img {
+		width: 24rem;
+		height: 24rem;
+	}
 }
 
 .member-item h3 {
@@ -395,11 +523,17 @@ ul.members-list {
 
 .contact-form {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr;
 	margin-top: 3.2rem;
 	row-gap: 2rem;
 	column-gap: 3.2rem;
 	text-align: left;
+}
+
+@media screen and (min-width: 36em) {
+	.contact-form {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .fullwidth {
@@ -409,4 +543,20 @@ ul.members-list {
   
 .align-right {
 	text-align: right;
-}  
+}
+
+
+/* Media Queries */
+/* Mobile first conseillé - optimise les performances - du plus simple vers le plus complexe / du moins large vers le plus large / du smartphone vers le desktop */
+
+@media screen and ( max-width: 768px ) {
+	/* Règles s'appliquant entre 0 et 768px de largeur */
+}
+
+@media screen and ( min-width: 1000px ) {
+	/* Règles s'appliquant de 1000px à l'infini */
+}
+
+@media screen and (min-width: 700px) and (max-width:1100px) {
+	/* Règles s'appliquant de 700 à 1100px de largeur */
+}
