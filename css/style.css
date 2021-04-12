@@ -329,12 +329,13 @@ x-small : container = 100%
 	right: 0;
 	background-color: var(--primary);
 	transform: translateX(-100%);
-	transition: transform .5s ease-out, visibility .001s .5s;
+	transition: .5s;
+	/* transition: transform .5s ease-out, visibility .001s .5s; */
 }
 
 .menu:not([hidden]) {
 	transform: translateX(0);
-	transition: visibility .001s, transform .5s .001s ease-in;
+	/* transition: visibility .001s, transform .5s .001s ease-in; */
 }
 
 @media screen and (min-width: 36em) {
@@ -346,6 +347,7 @@ x-small : container = 100%
 		display: flex;
 		position: static;
 		visibility: visible;
+		transform: translateX(0);
 	}
 }
 
